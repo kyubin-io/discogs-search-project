@@ -1,0 +1,16 @@
+.buttonContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.button {
+  padding: 8px;
+  border-radius: 8px;
+  background-color: #e60023;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}

@@ -1,0 +1,28 @@
+.wrapper {
+  padding: 0px 28px;
+}
+
+.ul {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, 200px);
+  margin-bottom: 12px;
+}
+
+.release {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex-basis: 100%;
+  padding: 4px;
+}
+
+.title {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.year {
+  color: darkgray;
+}

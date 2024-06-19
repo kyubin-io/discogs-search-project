@@ -8,6 +8,7 @@ export async function searchArtists(
   const response = await fetch(
     `${API_BASE}/database/search?q=${query}&type=artist&page=${page}&per_page=${per_page}&token=${process.env.NEXT_PUBLIC_DISCOG_TOKEN}`
   );
+  console.log("====>", response);
   if (!response.ok) {
     throw new Error("Network response was not ok");
   }
