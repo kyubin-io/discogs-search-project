@@ -17,3 +17,25 @@ export async function searchArtists(
 
   return json;
 }
+
+export async function getArtist(id: number) {
+  const response = await fetch(
+    `${API_BASE}/artists/${id}?token=${process.env.NEXT_PUBLIC_DISCOG_TOKEN}`
+  );
+  if (!response.ok) {
+    throw new Error("Network response was not ok");
+  }
+  const json = await response.json();
+  return json;
+}
+
+export async function getReleases(id: number, page: number) {
+  const response = await fetch(
+    `${API_BASE}/artists/${id}/releases?per_page=${PER_RELEASE_PAGE}&page=${page}&token=${process.env.NEXT_PUBLIC_DISCOG_TOKEN}`
+  );
+  if (!response.ok) {
+    throw new Error("Network response was not ok");
+  }
+  const json = await response.json();
+  return json;
+}
