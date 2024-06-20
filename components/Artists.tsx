@@ -4,6 +4,7 @@ import React from "react";
 import styles from "../styles/artists.module.css";
 import PaginationButtons from "./PaginationButtons";
 import { Artist } from "@/app/page";
+import UserPNG from "../public/img/user.png";
 
 type ArtistsProps = {
   artists: Artist[];
@@ -18,6 +19,7 @@ export default function Artists({
   per_page,
   setPage,
 }: ArtistsProps) {
+  console.log(artists);
   return (
     <section className={styles.section}>
       <ul className={styles.gridContainer}>
@@ -25,10 +27,9 @@ export default function Artists({
           <li key={artist.id}>
             <Link href={`/artist/${artist.id}`} className={styles.li}>
               <Image
-                unoptimized
                 width={250}
                 height={250}
-                src={artist.cover_image}
+                src={artist.thumb || UserPNG}
                 alt={artist.title}
               />
               <span className={styles.title}>{artist.title}</span>

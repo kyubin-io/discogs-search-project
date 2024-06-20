@@ -4,8 +4,8 @@ import { Metadata } from "next";
 import { Suspense } from "react";
 
 export const metadata: Metadata = {
-  title: "Release",
-  description: "Release page",
+  title: "Artist",
+  description: "Artist page",
 };
 
 type Release = {

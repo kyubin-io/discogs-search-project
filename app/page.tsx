@@ -12,7 +12,7 @@ import { PER_PAGE } from "@/lib/constants";
 export type Artist = {
   id: number;
   title: string;
-  cover_image: string;
+  thumb: string;
   type: string;
 };
 
