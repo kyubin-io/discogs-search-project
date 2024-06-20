@@ -22,7 +22,7 @@ export default function Home() {
   const [page, setPage] = useState<number>(1);
   const [totalPages, setTotalPages] = useState<number>(0);
 
-  const search = async () => {
+  const handleSearch = async () => {
     try {
       const results = await searchArtists(query, page, PER_PAGE);
       setArtists(results?.results);
@@ -34,13 +34,13 @@ export default function Home() {
 
   const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === "Enter") {
-      search();
+      handleSearch();
     }
   };
 
   useEffect(() => {
     if (query) {
-      search();
+      handleSearch();
     }
   }, [page]);
 
@@ -53,8 +53,8 @@ export default function Home() {
         <Search
           setQuery={setQuery}
           query={query}
-          handleKeyDown={handleKeyDown}
-          searchArtists={searchArtists}
+          onKeyDown={handleKeyDown}
+          onSearch={handleSearch}
         />
       </section>
       <Artists
