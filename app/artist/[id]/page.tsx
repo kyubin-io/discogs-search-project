@@ -1,6 +1,12 @@
 import ArtistInfo from "@/components/ArtistInfo";
 import Releases from "@/components/Releases";
+import { Metadata } from "next";
 import { Suspense } from "react";
+
+export const metadata: Metadata = {
+  title: "Release",
+  description: "Release page",
+};
 
 type Release = {
   id: number;
