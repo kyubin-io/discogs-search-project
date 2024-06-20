@@ -17,7 +17,7 @@ export default function Search({
   return (
     <div>
       <div className={styles.wrapper}>
-        <form className={styles.search}>
+        <div className={styles.search}>
           <input
             type="text"
             value={query}
@@ -33,7 +33,7 @@ export default function Search({
           >
             <FaSearch />
           </button>
-        </form>
+        </div>
       </div>
     </div>
   );
