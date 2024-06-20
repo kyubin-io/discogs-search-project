@@ -4,8 +4,8 @@ import { getReleaseDeital } from "@/app/api/routes";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Artist",
-  description: "Artist page",
+  title: "Release",
+  description: "Release page",
 };
 
 type Track = {
