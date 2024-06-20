@@ -14,15 +14,10 @@ export default function Search({
   onKeyDown,
   onSearch,
 }: Props) {
-  function handleSubmit(e: any) {
-    e.preventDefault();
-    console.log(e);
-  }
-
   return (
     <div>
       <div className={styles.wrapper}>
-        <form className={styles.search} onSubmit={(e) => handleSubmit(e)}>
+        <form className={styles.search}>
           <input
             type="text"
             value={query}
