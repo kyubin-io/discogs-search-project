@@ -52,7 +52,7 @@ export default async function ReleasePage(id: RouterParams) {
           <div className={styles.name}>{release.artists_sort}</div>
           <h1 className={styles.about}>{release.year}</h1>
 
-          <p>Number of people in collection: {release.community?.have}</p>
+          <p>Number of people in collection: {release.community?.have || 0}</p>
         </div>
       </div>
 
